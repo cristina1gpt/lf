@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f6f0">
+    <meta name="description" content="O idee de mâncare românească pentru fiecare zi, cu rețete simple și ingrediente la îndemână.">
+    <title>Din Cuptor — Rețeta zilei</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Din Cuptor, pagina principală">
+        <span class="brand-mark" aria-hidden="true">D</span>
+        <span>din <strong>cuptor</strong></span>
+      </a>
+      <span class="topbar-note">Rețete cu gust de acasă</span>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p class="eyebrow">Meniul tău, zi de zi</p>
+        <h1>Ce punem<br><em>azi pe masă?</em></h1>
+        <p class="intro-copy">Idei de mâncare românească pentru următoarele trei luni. Alege o zi și găsește ceva bun de gătit.</p>
+        <div class="range-pill"><span class="range-dot"></span> 90 de zile · 31 de rețete de casă</div>
+      </section>
+
+      <section class="planner" aria-label="Planificatorul rețetelor">
+        <div class="planner-heading">
+          <div>
+            <p class="eyebrow">Planificator</p>
+            <h2>Rețeta ta</h2>
+          </div>
+          <label class="date-picker">
+            <span class="sr-only">Alege o zi</span>
+            <span aria-hidden="true">▦</span>
+            <input id="date-picker" type="date">
+          </label>
+        </div>
+
+        <article class="recipe-card" aria-live="polite">
+          <div class="recipe-art" aria-hidden="true">
+            <span class="art-sun"></span>
+            <span class="art-leaf leaf-one"></span>
+            <span class="art-leaf leaf-two"></span>
+            <span class="art-plate"><span class="plate-food"></span></span>
+            <span class="art-caption">POFTĂ BUNĂ</span>
+          </div>
+          <div class="recipe-content">
+            <div class="recipe-meta">
+              <span id="recipe-category" class="category-tag"></span>
+              <span id="recipe-time"></span>
+            </div>
+            <p id="recipe-date" class="recipe-date"></p>
+            <h3 id="recipe-title"></h3>
+            <p id="recipe-description" class="recipe-description"></p>
+            <div class="recipe-columns">
+              <section>
+                <h4>Ai nevoie de</h4>
+                <ul id="recipe-ingredients"></ul>
+              </section>
+              <section>
+                <h4>Cum o pregătești</h4>
+                <ol id="recipe-steps"></ol>
+              </section>
+            </div>
+          </div>
+        </article>
+
+        <div class="day-navigation">
+          <button id="previous-day" class="arrow-button" type="button" aria-label="Ziua precedentă">←</button>
+          <p id="day-count"></p>
+          <button id="next-day" class="arrow-button" type="button" aria-label="Ziua următoare">→</button>
+        </div>
+      </section>
+
+      <section class="coming-up" aria-labelledby="coming-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Puțină inspirație</p>
+            <h2 id="coming-title">Urmează la masă</h2>
+          </div>
+          <span class="section-aside">Următoarele 5 zile</span>
+        </div>
+        <div id="upcoming-list" class="upcoming-list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <span class="brand"><span class="brand-mark" aria-hidden="true">D</span><span>din <strong>cuptor</strong></span></span>
+      <p>Rețete simple, mese împreună.</p>
+    </footer>
+  </body>
+</html>
